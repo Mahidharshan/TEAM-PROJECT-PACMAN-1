@@ -1,0 +1,68 @@
+body{
+    background-image: url("https://w0.peakpx.com/wallpaper/270/939/HD-wallpaper-pac-man-circuit-ghost.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: px;
+}
+
+.pacman::before,
+.pacman::after{
+    content: " ";
+    position: absolute;
+    background: #07ffeae8;
+    width: 90px;
+    height: 45px;
+    margin-left: -50px;
+    margin-top: -70px;
+    border-radius: 50px 50px 0 0 ;
+    animation: up 0.4s infinite;
+}
+
+.pacman::after{
+    margin-top: -25px;
+    border-radius: 0 0 50px 50px;
+    animation: down 0.4s infinite;
+}
+
+.dot{
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    margin-top: -30px;
+    margin-left: 15px;
+    border-radius: 40px 30px px 60px;
+    background: #fffb0785;
+    box-shadow: 40px 0 0 #fffb07a4, 80px 0 0 #fffb07c6, 120px 0 0 #fffb07, 160px 0 0 #fffb07;
+    animation: right_to_left 0.4s infinite;
+    z-index: -1;
+}
+
+@keyframes up{
+    0%, 100%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-40deg);
+    }
+}
+
+@keyframes down{
+    0%, 100%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes right_to_left{
+    100%{
+        margin-left: -6px;
+    }
+}
